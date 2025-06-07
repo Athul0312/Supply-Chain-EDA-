@@ -1,47 +1,48 @@
 # Supply-Chain-EDA-
 This project performs an exploratory analysis of skincare product performance across five cities using a retail supply chain dataset. The analysis focuses on four core aspects: Availability, Units Sold, Revenue Generated, and Price, combining both visual KDE analysis and bar chart comparisons.
 
-Observations:
+This was meant to be a lightweight EDA exercise…
+And then it kind of turned into a (a very deep) rabbit hole.
+So here’s what this repo is and what it isn’t:
 
-* Across the skincare segment, regional performance varies sharply across availability, sales volume, price, and revenue:
-
-* Kolkata stands out with strong sales and revenue, supported by a balanced pricing strategy (visible bimodal price distribution) and decent availability.
-
-* Chennai consistently performs extremely well in revenue with pricing skewed toward the premium side. It shows potential as a high-margin market.
-
-* Chennai however does have only medium availability and sales volume, indicating that perhaps the bottleneck here is the availability. The previous point suggests that PMF here is good, therefore, increasing availability could potentially increase the sales volume and revenue gen. 
-
-* Mumbai has strong revenue with prices indicating a strong market for premium products despite lower availability and fewer units sold — suggesting high sales volumnes of premium products.
-
-* Once again, the availability oculd be the bottleneck here. Mumbai has a VERY distinct bimodal Price distribution => Two clear Segments, which must also be kept in mind while stocking the inventory.
-
-* Delhi appears mid-range in both price and volume, performing decently overall but lacking standout efficiency. DElhi has high sales but medium range revenue generation, as well price per product. 
-
-* This indicates that there is scope for a test programme of introducing higher priced SKUs and then tracking the volume of sales, which if successful, would boost the revenue generation from Delhi.
-
-* Bangalore is the most misaligned: it has the highest availability but lowest sales and revenue, with pricing skewed heavily toward ultra-low. This mismatch likely reflects poor product-market fit.
-
-* These insights suggest that aligning product pricing and inventory with local demand profiles is critical. 
-
-* Bangalore in particular may benefit from reassessment — either by reducing overstocking or introducing better-fitting SKUs.
+What I Did:
+  I picked a subset of the full retail supply chain dataset — specifically, skincare products.
+  Looked at how they performed across five cities: 
+    Bangalore, Mumbai, Delhi, Kolkata, and Chennai
+  Focused on four core variables:
+    Availability, Units Sold, Revenue Generated, and Price
+  Compared these across cities using both KDE plots and summary stats
+  My primary focus was to leran how to draw actionable insights based on mismatches between stocking, pricing, and performance, instead of just coming up with pretty plots. It would've taken me less time to just pull up plots including all 24 variables and just leave it at that, but my aim was to make sense of the limited variables I was focussing on and learn how to draw insights.
 
 
-Key Regional Insights:
+Why I Did Only This:
+  There are ~20+ other variables in the dataset — lead times, defect rates, shipping, carriers, routes, etc.
+  And yes, I didn’t touch them.  
+  This wasn’t meant to be a comprehensive dashboard-style project.
+  The goal was to go deep into a few important variables rather than surface level over all 24 , and try to answer one key question:
+     “How well are we selling skincare across locations — and why?”
+  If this were a real case study, that’s the slice of the business I was trying to understand.
 
-  Kolkata:
-    Strongest overall performance. High sales and revenue despite moderate availability, with a balanced pricing mix (budget + premium). A well-aligned market — no major bottlenecks.
+Where the Actual Insights Are:
+  Let’s be honest — the top part of the notebook is a bit fluffy.
+  Some warm-up plots, basic bar charts, setting the stage.
+  The real meat — the multi-variable deep dive into skincare by location — is further down the notebook.
+  If you’re just here for the good stuff, Ctrl+F for: Skincare Analysis by Location
 
-  Chennai:
-    High revenue and premium-leaning pricing suggest strong product-market fit. However, medium availability and sales volumes imply that supply may be the constraint. Increasing availability could unlock additional growth.
 
-  Mumbai:
-    Strong revenue despite low availability and moderate sales. Distinct bimodal price distribution suggests dual demand for both budget and premium products. Inventory planning should reflect this price segmentation.
+Core Findings:
+  Kolkata: Great efficiency — strong revenue + sales from moderate availability. Balanced price mix.
+  Chennai: Premium-leaning, high revenue, but medium supply → scale up availability.
+  Mumbai: Low stock, low sales, high revenue → premium products likely carrying the weight.
+  Delhi: High sales, average revenue → test premium SKUs.
+  Bangalore: Well-stocked, badly performing → pricing too low, demand mismatch.
 
-  Delhi:
-    High sales but only moderate revenue and average pricing. This suggests Delhi is currently a volume-heavy, low-margin market. A controlled test introducing higher-priced SKUs could help raise overall revenue.
 
-  Bangalore:
-    Highest and most consistent availability, but lowest sales and revenue. Heavy skew toward ultra-budget pricing likely reflects poor demand alignment. Suggest reevaluating product mix and introducing more mid-range SKUs.
+TL;DR
 
-  Summary:
-    This project highlights how availability, price, and demand interact differently across regions. While Kolkata and Chennai show strong alignment, Mumbai and Delhi offer clear strategic opportunities, and Bangalore presents a case for serious course correction.
+This project was a scoped deep dive into one product category to understand regional demand and pricing alignment.
+I felt there would be more to leearn by going deep into a few variables than surface level skimming over 24 variables.
+It’s not flashy. It’s not complete. But it’s real. 
+And I learned a lot doing it.
+
+
